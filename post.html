@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>xxx冬季送温暖</title>
+    <link rel="stylesheet" href="{{static_url('normalize.css')}}">
+    <link rel="stylesheet" href="{{static_url('style.css')}}" media="screen" type="text/css" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <section class="login-form-wrap">
+        <h1>xxx</h1>
+        <h2><font color="#FF0000">价值150元咖啡券<br>(每手机号限领1次)</font></h2>
+        <form class="login-form" method="POST" action="/index">
+            <br>
+            <br>
+            <label>
+                <!-- <p>姓名：<input type="text" name="name" > -->
+                <p>手机：<input type="tel" name="phone" onkeydown="onlyNum();" pattern="^1\d{10}$" maxlength="11">
+            </label>
+            <br>
+            <br>
+            <input type="submit" value="立即领取">
+        </form>
+    </section>
+    <div style="text-align:center;clear:both">
+</div>
+</body>
+<script language=javascript>
+function onlyNum(){
+    if(!(event.keyCode==46)&&!(event.keyCode==8)&&!(event.keyCode==37)&&!(event.keyCode==39))
+    if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
+    event.returnValue=false;
+}
+</script>
+</html>
